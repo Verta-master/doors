@@ -1,0 +1,35 @@
+.title-2 {
+  margin-top: 0;
+  font-size: 35px;
+  font-weight: 300;
+  
+  a {
+    position: relative;
+    color: @yellow;
+    border-bottom: 3px solid @yellow;
+    background-color: #fff;
+    
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      bottom: -7px;
+      left: 50%;
+      transform: translateX(-50%) rotate(45deg);
+      width: 10px;
+      height: 10px;
+      background-color: @yellow;
+    }
+    
+    &:hover,
+    &:active {
+      border-color: #fff;
+      .transition();
+      
+      &::before {
+        opacity: 0;
+        .transition();
+      }
+    }
+  }
+}
