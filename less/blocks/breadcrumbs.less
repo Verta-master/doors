@@ -1,0 +1,23 @@
+.breadcrumbs {
+  padding-top: 25px;
+//  padding-bottom: 20px;
+  font-size: 15px;
+  color: #838383;
+}
+
+a.breadcrumbs__link {
+  position: relative;
+  
+  &::after {
+    content: "\2014";
+    position: relative;
+    top: 0;
+    right: -15px;
+    margin-right: 25px;
+  }
+  
+  &:hover,
+  &:active {
+    color: #000;
+  }
+}
