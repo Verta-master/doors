@@ -1,0 +1,52 @@
+.pages {
+  margin-top: 55px;
+}
+
+.pages__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.pages__comment {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.pages__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  line-height: 1;
+  color: #444444;
+  border: 1px solid rgb(232, 232, 232);
+  
+  &--prev,
+  &--next {
+    border: 0;
+    font-size: 45px;
+    font-weight: 500;
+    color: #cccccc;
+  }
+  
+  &--more {
+    border: 0;
+  }
+  
+  &--active {
+    color: #fff;
+    border-color: #826658;
+    background-color: #826658;
+  }
+}
+
+a.pages__link {
+  &:hover,
+  &:active {
+    color: #826658;
+  }
+}
