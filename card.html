@@ -108,6 +108,86 @@
               <span class="card__comment">Под заказ</span>
             </p>
             <p class="card__title">Доступные варианты</p>
+            <div class="card__color">
+              <p class="card__name">Цвет полотна</p>
+              <div class="card__colors">
+                <input type="radio" id="color1" name="radio1" class="card__radio">
+                <input type="radio" id="color2" name="radio1" class="card__radio">
+                <input type="radio" id="color3" name="radio1" class="card__radio" checked>
+                <input type="radio" id="color4" name="radio1" class="card__radio">
+                <input type="radio" id="color5" name="radio1" class="card__radio">
+                <input type="radio" id="color6" name="radio1" class="card__radio">
+                <div class="card__color-wrap card__color-wrap--1">
+                  <label for="color1" class="card__choice card__choice--1">
+                    <img src="img/color-1.jpg" alt="Цвет 1">
+                  </label>
+                  <span>Цвет 1</span>
+                </div>
+                <div class="card__color-wrap card__color-wrap--2">
+                  <label for="color2" class="card__choice card__choice--2">
+                    <img src="img/color-2.jpg" alt="Цвет 2">
+                  </label>
+                  <span>Цвет 2</span>
+                </div>
+                <div class="card__color-wrap card__color-wrap--3">
+                  <label for="color3" class="card__choice card__choice--3">
+                    <img src="img/color-3.jpg" alt="Цвет 3">
+                  </label>
+                  <span>Цвет 3</span>
+                </div>
+                <div class="card__color-wrap card__color-wrap--4">
+                  <label for="color4" class="card__choice card__choice--4">
+                    <img src="img/color-4.jpg" alt="Цвет 4">
+                  </label>
+                  <span>Цвет 4</span>
+                </div>
+                <div class="card__color-wrap card__color-wrap--5">
+                  <label for="color5" class="card__choice card__choice--5">
+                    <img src="img/color-5.jpg" alt="Цвет 5">
+                  </label>
+                  <span>Цвет 5</span>
+                </div>
+                <div class="card__color-wrap card__color-wrap--6">
+                  <label for="color6" class="card__choice card__choice--6">
+                    <img src="img/color-6.jpg" alt="Цвет 6">
+                  </label>
+                  <span>Цвет 6</span>
+                </div>
+              </div>
+            </div>
+            <div class="card__color">
+              <p class="card__name">Цвет cтекла</p>
+              <div class="card__colors">
+                <input type="radio" id="color7" name="radio2" class="card__radio" checked>
+                <input type="radio" id="color8" name="radio2" class="card__radio">
+                <input type="radio" id="color9" name="radio2" class="card__radio">
+                <input type="radio" id="color10" name="radio2" class="card__radio">
+                <div class="card__color-wrap card__color-wrap--7">
+                  <label for="color7" class="card__choice card__choice--7">
+                    <img src="img/color-7.jpg" alt="Цвет 1">
+                  </label>
+                  <span>Цвет 1</span>
+                </div>
+                <div class="card__color-wrap card__color-wrap--8">
+                  <label for="color8" class="card__choice card__choice--8">
+                    <img src="img/color-8.jpg" alt="Цвет 2">
+                  </label>
+                  <span>Цвет 2</span>
+                </div>
+                <div class="card__color-wrap card__color-wrap--9">
+                  <label for="color9" class="card__choice card__choice--9">
+                    <img src="img/color-9.jpg" alt="Цвет 3">
+                  </label>
+                  <span>Цвет 3</span>
+                </div>
+                <div class="card__color-wrap card__color-wrap--10">
+                  <label for="color10" class="card__choice card__choice--10">
+                    <img src="img/color-10.jpg" alt="Цвет 4">
+                  </label>
+                  <span>Цвет 4</span>
+                </div>
+              </div>
+            </div>
             
             <div class="card__line">
               <label for="select" class="card__label">Стоимость</label>
@@ -340,5 +420,17 @@
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/script.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.js"></script>
+  
+  <!-- Tip -->
+  <script>
+    $('.card__tip').click(function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      $('.card__tip-down').slideToggle();
+    });
+    $("body").click(function(){
+      $('.card__tip-down').slideUp();
+    });
+  </script>
 </body>
 </html>

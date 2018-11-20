@@ -46,10 +46,8 @@
 .card__title {
   margin-top: 30px;
   margin-bottom: 15px;
-  padding-bottom: 15px;
   font-size: 24px;
   font-weight: 500;
-  border-bottom: 1px solid rgb(221, 221, 221);
 }
 
 .card__line {
@@ -111,6 +109,7 @@
 }
 
 .card__tip-down {
+  display: none;
   position: absolute;
   top: 100%;
   left: 0;
@@ -169,7 +168,6 @@
     
     > li {
       position: relative;
-//      padding-left: 20px;
       margin-bottom: 30px;
       text-indent: 20px;
       
@@ -197,4 +195,108 @@
   align-items: center;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.card__color {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  border-top: 1px solid rgb(221, 221, 221);
+}
+
+.card__name {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.card__colors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+}
+
+.card__radio {
+  display: none;
+}
+
+.card__choice {
+  position: relative;
+  width: 100px;
+  height: 60px;
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  &::before {
+    display: none;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 7px solid #fff;
+    outline: 2px solid @yellow;
+    outline-offset: -2px;
+  }
+}
+
+.card__color-wrap {
+  margin-right: 10px;
+  margin-bottom: 10px;
+
+  &:nth-of-type(6n) {
+    margin-right: 0;
+  }
+  
+  span {
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 130px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #826658;
+  }
+}
+
+#color1:checked ~ .card__color-wrap--1,
+#color2:checked ~ .card__color-wrap--2,
+#color3:checked ~ .card__color-wrap--3,
+#color4:checked ~ .card__color-wrap--4,
+#color5:checked ~ .card__color-wrap--5,
+#color6:checked ~ .card__color-wrap--6,
+#color7:checked ~ .card__color-wrap--7,
+#color8:checked ~ .card__color-wrap--8,
+#color9:checked ~ .card__color-wrap--9,
+#color10:checked ~ .card__color-wrap--10,
+#color11:checked ~ .card__color-wrap--11,
+#color12:checked ~ .card__color-wrap--12 {
+  span {
+    display: block;
+  }
+  
+  .card__choice--12::before,
+  .card__choice--11::before,
+  .card__choice--10::before,
+  .card__choice--9::before,
+  .card__choice--8::before,
+  .card__choice--7::before,
+  .card__choice--6::before,
+  .card__choice--5::before,
+  .card__choice--4::before,
+  .card__choice--3::before,
+  .card__choice--2::before,
+  .card__choice--1::before {
+    display: block;
+  }
 }
