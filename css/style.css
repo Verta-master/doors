@@ -1594,10 +1594,8 @@ a.pages__link:active {
 .card__title {
   margin-top: 30px;
   margin-bottom: 15px;
-  padding-bottom: 15px;
   font-size: 24px;
   font-weight: 500;
-  border-bottom: 1px solid #dddddd;
 }
 .card__line {
   display: -webkit-box;
@@ -1656,6 +1654,7 @@ a.pages__link:active {
   text-decoration: none;
 }
 .card__tip-down {
+  display: none;
   position: absolute;
   top: 100%;
   left: 0;
@@ -1739,6 +1738,236 @@ a.pages__link:active {
           align-items: center;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+.card__color {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  border-top: 1px solid #dddddd;
+}
+.card__name {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: 500;
+  font-size: 16px;
+}
+.card__colors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+}
+.card__radio {
+  display: none;
+}
+.card__choice {
+  position: relative;
+  width: 100px;
+  height: 60px;
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+}
+.card__choice img {
+  width: 100%;
+  height: 100%;
+}
+.card__choice::before {
+  display: none;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 7px solid #fff;
+  outline: 2px solid #ffd16f;
+  outline-offset: -2px;
+}
+.card__color-wrap {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.card__color-wrap:nth-of-type(6n) {
+  margin-right: 0;
+}
+.card__color-wrap span {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 130px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #826658;
+}
+#color1:checked ~ .card__color-wrap--1 span,
+#color2:checked ~ .card__color-wrap--2 span,
+#color3:checked ~ .card__color-wrap--3 span,
+#color4:checked ~ .card__color-wrap--4 span,
+#color5:checked ~ .card__color-wrap--5 span,
+#color6:checked ~ .card__color-wrap--6 span,
+#color7:checked ~ .card__color-wrap--7 span,
+#color8:checked ~ .card__color-wrap--8 span,
+#color9:checked ~ .card__color-wrap--9 span,
+#color10:checked ~ .card__color-wrap--10 span,
+#color11:checked ~ .card__color-wrap--11 span,
+#color12:checked ~ .card__color-wrap--12 span {
+  display: block;
+}
+#color1:checked ~ .card__color-wrap--1 .card__choice--12::before,
+#color2:checked ~ .card__color-wrap--2 .card__choice--12::before,
+#color3:checked ~ .card__color-wrap--3 .card__choice--12::before,
+#color4:checked ~ .card__color-wrap--4 .card__choice--12::before,
+#color5:checked ~ .card__color-wrap--5 .card__choice--12::before,
+#color6:checked ~ .card__color-wrap--6 .card__choice--12::before,
+#color7:checked ~ .card__color-wrap--7 .card__choice--12::before,
+#color8:checked ~ .card__color-wrap--8 .card__choice--12::before,
+#color9:checked ~ .card__color-wrap--9 .card__choice--12::before,
+#color10:checked ~ .card__color-wrap--10 .card__choice--12::before,
+#color11:checked ~ .card__color-wrap--11 .card__choice--12::before,
+#color12:checked ~ .card__color-wrap--12 .card__choice--12::before,
+#color1:checked ~ .card__color-wrap--1 .card__choice--11::before,
+#color2:checked ~ .card__color-wrap--2 .card__choice--11::before,
+#color3:checked ~ .card__color-wrap--3 .card__choice--11::before,
+#color4:checked ~ .card__color-wrap--4 .card__choice--11::before,
+#color5:checked ~ .card__color-wrap--5 .card__choice--11::before,
+#color6:checked ~ .card__color-wrap--6 .card__choice--11::before,
+#color7:checked ~ .card__color-wrap--7 .card__choice--11::before,
+#color8:checked ~ .card__color-wrap--8 .card__choice--11::before,
+#color9:checked ~ .card__color-wrap--9 .card__choice--11::before,
+#color10:checked ~ .card__color-wrap--10 .card__choice--11::before,
+#color11:checked ~ .card__color-wrap--11 .card__choice--11::before,
+#color12:checked ~ .card__color-wrap--12 .card__choice--11::before,
+#color1:checked ~ .card__color-wrap--1 .card__choice--10::before,
+#color2:checked ~ .card__color-wrap--2 .card__choice--10::before,
+#color3:checked ~ .card__color-wrap--3 .card__choice--10::before,
+#color4:checked ~ .card__color-wrap--4 .card__choice--10::before,
+#color5:checked ~ .card__color-wrap--5 .card__choice--10::before,
+#color6:checked ~ .card__color-wrap--6 .card__choice--10::before,
+#color7:checked ~ .card__color-wrap--7 .card__choice--10::before,
+#color8:checked ~ .card__color-wrap--8 .card__choice--10::before,
+#color9:checked ~ .card__color-wrap--9 .card__choice--10::before,
+#color10:checked ~ .card__color-wrap--10 .card__choice--10::before,
+#color11:checked ~ .card__color-wrap--11 .card__choice--10::before,
+#color12:checked ~ .card__color-wrap--12 .card__choice--10::before,
+#color1:checked ~ .card__color-wrap--1 .card__choice--9::before,
+#color2:checked ~ .card__color-wrap--2 .card__choice--9::before,
+#color3:checked ~ .card__color-wrap--3 .card__choice--9::before,
+#color4:checked ~ .card__color-wrap--4 .card__choice--9::before,
+#color5:checked ~ .card__color-wrap--5 .card__choice--9::before,
+#color6:checked ~ .card__color-wrap--6 .card__choice--9::before,
+#color7:checked ~ .card__color-wrap--7 .card__choice--9::before,
+#color8:checked ~ .card__color-wrap--8 .card__choice--9::before,
+#color9:checked ~ .card__color-wrap--9 .card__choice--9::before,
+#color10:checked ~ .card__color-wrap--10 .card__choice--9::before,
+#color11:checked ~ .card__color-wrap--11 .card__choice--9::before,
+#color12:checked ~ .card__color-wrap--12 .card__choice--9::before,
+#color1:checked ~ .card__color-wrap--1 .card__choice--8::before,
+#color2:checked ~ .card__color-wrap--2 .card__choice--8::before,
+#color3:checked ~ .card__color-wrap--3 .card__choice--8::before,
+#color4:checked ~ .card__color-wrap--4 .card__choice--8::before,
+#color5:checked ~ .card__color-wrap--5 .card__choice--8::before,
+#color6:checked ~ .card__color-wrap--6 .card__choice--8::before,
+#color7:checked ~ .card__color-wrap--7 .card__choice--8::before,
+#color8:checked ~ .card__color-wrap--8 .card__choice--8::before,
+#color9:checked ~ .card__color-wrap--9 .card__choice--8::before,
+#color10:checked ~ .card__color-wrap--10 .card__choice--8::before,
+#color11:checked ~ .card__color-wrap--11 .card__choice--8::before,
+#color12:checked ~ .card__color-wrap--12 .card__choice--8::before,
+#color1:checked ~ .card__color-wrap--1 .card__choice--7::before,
+#color2:checked ~ .card__color-wrap--2 .card__choice--7::before,
+#color3:checked ~ .card__color-wrap--3 .card__choice--7::before,
+#color4:checked ~ .card__color-wrap--4 .card__choice--7::before,
+#color5:checked ~ .card__color-wrap--5 .card__choice--7::before,
+#color6:checked ~ .card__color-wrap--6 .card__choice--7::before,
+#color7:checked ~ .card__color-wrap--7 .card__choice--7::before,
+#color8:checked ~ .card__color-wrap--8 .card__choice--7::before,
+#color9:checked ~ .card__color-wrap--9 .card__choice--7::before,
+#color10:checked ~ .card__color-wrap--10 .card__choice--7::before,
+#color11:checked ~ .card__color-wrap--11 .card__choice--7::before,
+#color12:checked ~ .card__color-wrap--12 .card__choice--7::before,
+#color1:checked ~ .card__color-wrap--1 .card__choice--6::before,
+#color2:checked ~ .card__color-wrap--2 .card__choice--6::before,
+#color3:checked ~ .card__color-wrap--3 .card__choice--6::before,
+#color4:checked ~ .card__color-wrap--4 .card__choice--6::before,
+#color5:checked ~ .card__color-wrap--5 .card__choice--6::before,
+#color6:checked ~ .card__color-wrap--6 .card__choice--6::before,
+#color7:checked ~ .card__color-wrap--7 .card__choice--6::before,
+#color8:checked ~ .card__color-wrap--8 .card__choice--6::before,
+#color9:checked ~ .card__color-wrap--9 .card__choice--6::before,
+#color10:checked ~ .card__color-wrap--10 .card__choice--6::before,
+#color11:checked ~ .card__color-wrap--11 .card__choice--6::before,
+#color12:checked ~ .card__color-wrap--12 .card__choice--6::before,
+#color1:checked ~ .card__color-wrap--1 .card__choice--5::before,
+#color2:checked ~ .card__color-wrap--2 .card__choice--5::before,
+#color3:checked ~ .card__color-wrap--3 .card__choice--5::before,
+#color4:checked ~ .card__color-wrap--4 .card__choice--5::before,
+#color5:checked ~ .card__color-wrap--5 .card__choice--5::before,
+#color6:checked ~ .card__color-wrap--6 .card__choice--5::before,
+#color7:checked ~ .card__color-wrap--7 .card__choice--5::before,
+#color8:checked ~ .card__color-wrap--8 .card__choice--5::before,
+#color9:checked ~ .card__color-wrap--9 .card__choice--5::before,
+#color10:checked ~ .card__color-wrap--10 .card__choice--5::before,
+#color11:checked ~ .card__color-wrap--11 .card__choice--5::before,
+#color12:checked ~ .card__color-wrap--12 .card__choice--5::before,
+#color1:checked ~ .card__color-wrap--1 .card__choice--4::before,
+#color2:checked ~ .card__color-wrap--2 .card__choice--4::before,
+#color3:checked ~ .card__color-wrap--3 .card__choice--4::before,
+#color4:checked ~ .card__color-wrap--4 .card__choice--4::before,
+#color5:checked ~ .card__color-wrap--5 .card__choice--4::before,
+#color6:checked ~ .card__color-wrap--6 .card__choice--4::before,
+#color7:checked ~ .card__color-wrap--7 .card__choice--4::before,
+#color8:checked ~ .card__color-wrap--8 .card__choice--4::before,
+#color9:checked ~ .card__color-wrap--9 .card__choice--4::before,
+#color10:checked ~ .card__color-wrap--10 .card__choice--4::before,
+#color11:checked ~ .card__color-wrap--11 .card__choice--4::before,
+#color12:checked ~ .card__color-wrap--12 .card__choice--4::before,
+#color1:checked ~ .card__color-wrap--1 .card__choice--3::before,
+#color2:checked ~ .card__color-wrap--2 .card__choice--3::before,
+#color3:checked ~ .card__color-wrap--3 .card__choice--3::before,
+#color4:checked ~ .card__color-wrap--4 .card__choice--3::before,
+#color5:checked ~ .card__color-wrap--5 .card__choice--3::before,
+#color6:checked ~ .card__color-wrap--6 .card__choice--3::before,
+#color7:checked ~ .card__color-wrap--7 .card__choice--3::before,
+#color8:checked ~ .card__color-wrap--8 .card__choice--3::before,
+#color9:checked ~ .card__color-wrap--9 .card__choice--3::before,
+#color10:checked ~ .card__color-wrap--10 .card__choice--3::before,
+#color11:checked ~ .card__color-wrap--11 .card__choice--3::before,
+#color12:checked ~ .card__color-wrap--12 .card__choice--3::before,
+#color1:checked ~ .card__color-wrap--1 .card__choice--2::before,
+#color2:checked ~ .card__color-wrap--2 .card__choice--2::before,
+#color3:checked ~ .card__color-wrap--3 .card__choice--2::before,
+#color4:checked ~ .card__color-wrap--4 .card__choice--2::before,
+#color5:checked ~ .card__color-wrap--5 .card__choice--2::before,
+#color6:checked ~ .card__color-wrap--6 .card__choice--2::before,
+#color7:checked ~ .card__color-wrap--7 .card__choice--2::before,
+#color8:checked ~ .card__color-wrap--8 .card__choice--2::before,
+#color9:checked ~ .card__color-wrap--9 .card__choice--2::before,
+#color10:checked ~ .card__color-wrap--10 .card__choice--2::before,
+#color11:checked ~ .card__color-wrap--11 .card__choice--2::before,
+#color12:checked ~ .card__color-wrap--12 .card__choice--2::before,
+#color1:checked ~ .card__color-wrap--1 .card__choice--1::before,
+#color2:checked ~ .card__color-wrap--2 .card__choice--1::before,
+#color3:checked ~ .card__color-wrap--3 .card__choice--1::before,
+#color4:checked ~ .card__color-wrap--4 .card__choice--1::before,
+#color5:checked ~ .card__color-wrap--5 .card__choice--1::before,
+#color6:checked ~ .card__color-wrap--6 .card__choice--1::before,
+#color7:checked ~ .card__color-wrap--7 .card__choice--1::before,
+#color8:checked ~ .card__color-wrap--8 .card__choice--1::before,
+#color9:checked ~ .card__color-wrap--9 .card__choice--1::before,
+#color10:checked ~ .card__color-wrap--10 .card__choice--1::before,
+#color11:checked ~ .card__color-wrap--11 .card__choice--1::before,
+#color12:checked ~ .card__color-wrap--12 .card__choice--1::before {
+  display: block;
 }
 @media (max-width: 1170px) {
   .wrapper {
