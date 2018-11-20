@@ -1753,6 +1753,8 @@ a.pages__link:active {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 20px;
+}
+.card__photo img {
   margin-bottom: 20px;
 }
 .card__color {
@@ -2003,6 +2005,7 @@ a.pages__link:active {
 }
 .modal__input {
   width: 100%;
+  max-width: 100%;
   height: 65px;
   padding: 0 20px;
   margin-bottom: 15px;
@@ -2058,6 +2061,12 @@ a.pages__link:active {
 .fancybox-close-small:active {
   background-color: #fac143;
 }
+@media (max-width: 1600px) {
+  .card__tip-wrap {
+    width: 100%;
+    margin-top: 15px;
+  }
+}
 @media (max-width: 1170px) {
   .wrapper {
     width: 100%;
@@ -2093,6 +2102,9 @@ a.pages__link:active {
   }
   .title-2 {
     text-align: center;
+  }
+  .card__img {
+    width: 275px;
   }
 }
 @media (max-width: 1022px) {
@@ -2166,6 +2178,9 @@ a.pages__link:active {
     width: 120px;
     height: auto;
   }
+  .card__info {
+    width: 440px;
+  }
 }
 @media (max-width: 766px) {
   .footer__wrap,
@@ -2232,6 +2247,30 @@ a.pages__link:active {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .card__wrap {
+    display: block;
+  }
+  .card__info,
+  .card__img {
+    width: 100%;
+  }
+  .title-4 {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+  .modal__form,
+  .modal {
+    max-width: 100%;
+  }
+  .modal__comment,
+  .modal__title,
+  .modal__form {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .fancybox-close-small {
+    right: 0;
   }
 }
 @media (max-width: 480px) {
@@ -2319,5 +2358,17 @@ a.pages__link:active {
   .article__table table td:last-child span {
     margin-left: auto;
     margin-right: auto;
+  }
+  .card__parameters {
+    padding: 15px;
+  }
+  .title-4 {
+    font-size: 20px;
+  }
+  .card__tip-down {
+    max-width: 100%;
+  }
+  .modal__title {
+    font-size: 24px;
   }
 }
