@@ -414,7 +414,18 @@
   
   <!-- Modal windows -->
   <div style="display: none;" id="order" class="modal">
-    
+    <p class="modal__title">Отправить заявку</p>
+    <form action="#" class="modal__form">
+      <input type="text" class="modal__input" placeholder="ФИО">
+      <input type="email" class="modal__input" placeholder="Email">
+      <input type="tel" class="modal__input" placeholder="Телефон">
+      <div class="modal__wrap">
+        <input type="checkbox" id="check" class="filter__checkbox" checked>
+        <label for="check" class="filter__check">Я не робот</label>
+      </div>
+      <button class="btn modal__btn">Отправить заявку</button>
+    </form>
+    <p class="modal__comment">Наш менеджер свяжется с вами в ближайшее время</p>
   </div>
   
   <script src="js/jquery-3.2.1.min.js"></script>
